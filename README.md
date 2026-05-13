@@ -88,3 +88,14 @@ terraform apply -var="db_admin_password=YourPassword123!"
 *Deployed and verified on Azure Portal — infrastructure destroyed after testing to manage costs.*
 
 ![Architecture Diagram](./docs/architecture.png)
+
+## 📸 Deployment Evidence
+
+### Azure Resources Overview
+![Azure Resources](./images/azure_resources.png)
+
+### Network Isolation (VNet & Subnets)
+![Network Setup](./images/network_setup.png)
+
+### Live Website
+![Live Website](./images/website_live.png)
