@@ -1,0 +1,2 @@
+# terraform.tfvars.example
+db_admin_password = "REPLACE_WITH_SECURE_PASSWORD"
