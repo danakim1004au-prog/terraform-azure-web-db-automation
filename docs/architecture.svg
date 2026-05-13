@@ -1,0 +1,71 @@
+<svg width="100%" viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .title { font: 500 14px sans-serif; fill: #042C53; }
+      .sub { font: 400 12px sans-serif; fill: #185FA5; }
+      .label { font: 400 12px sans-serif; fill: #444441; }
+      .arr { stroke: #5F5E5A; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Internet -->
+  <rect x="240" y="20" width="200" height="44" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+  <text class="title" x="340" y="40" text-anchor="middle">Internet</text>
+  <text class="sub" x="340" y="56" text-anchor="middle" fill="#5F5E5A">HTTPS traffic</text>
+
+  <line x1="340" y1="64" x2="340" y2="100" class="arr" marker-end="url(#arrow)"/>
+
+  <!-- Resource Group -->
+  <rect x="40" y="105" width="600" height="380" rx="14" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="title" x="64" y="130">Resource group</text>
+  <text class="sub" x="64" y="148">rg-secure-2tier-dev (Korea Central)</text>
+
+  <!-- VNet -->
+  <rect x="60" y="170" width="560" height="295" rx="12" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="title" x="84" y="192" fill="#26215C">Virtual network</text>
+  <text class="sub" x="84" y="210" fill="#534AB7">vnet-main (10.0.0.0/16)</text>
+
+  <!-- Web Subnet -->
+  <rect x="85" y="235" width="260" height="210" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="title" x="105" y="258" fill="#04342C">Web subnet</text>
+  <text class="sub" x="105" y="276" fill="#0F6E56">snet-web (10.0.1.0/24)</text>
+
+  <rect x="110" y="300" width="210" height="56" rx="8" fill="#FFFFFF" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="title" x="215" y="322" text-anchor="middle" fill="#04342C">App Service</text>
+  <text class="sub" x="215" y="342" text-anchor="middle" fill="#0F6E56">Linux, PHP 8.2</text>
+
+  <rect x="110" y="372" width="210" height="44" rx="8" fill="#FFFFFF" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="sub" x="215" y="397" text-anchor="middle" fill="#0F6E56">NSG: allow 80, 443</text>
+
+  <!-- DB Subnet -->
+  <rect x="365" y="235" width="235" height="210" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="title" x="385" y="258" fill="#4A1B0C">DB subnet</text>
+  <text class="sub" x="385" y="276" fill="#993C1D">snet-db (10.0.2.0/24)</text>
+
+  <rect x="385" y="300" width="195" height="56" rx="8" fill="#FFFFFF" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="title" x="482" y="322" text-anchor="middle" fill="#4A1B0C">Azure SQL</text>
+  <text class="sub" x="482" y="342" text-anchor="middle" fill="#993C1D">Basic tier, private</text>
+
+  <rect x="385" y="372" width="195" height="44" rx="8" fill="#FFFFFF" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="sub" x="482" y="397" text-anchor="middle" fill="#993C1D">VNet rule restricted</text>
+
+  <!-- App to DB arrow -->
+  <line x1="320" y1="328" x2="385" y2="328" class="arr" marker-end="url(#arrow)"/>
+  <text class="label" x="352" y="322" text-anchor="middle">SQL</text>
+
+  <!-- Key Vault -->
+  <rect x="240" y="495" width="200" height="50" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+  <text class="title" x="340" y="516" text-anchor="middle" fill="#412402">Key Vault</text>
+  <text class="sub" x="340" y="534" text-anchor="middle" fill="#854F0B">Managed identity access</text>
+
+  <!-- App to Key Vault -->
+  <path d="M215 416 L215 470 L290 470 L290 495" class="arr" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <text class="label" x="170" y="465">Secret ref</text>
+
+  <!-- DB to Key Vault -->
+  <path d="M482 416 L482 470 L390 470 L390 495" class="arr" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <text class="label" x="500" y="465">Stores password</text>
+</svg>
